@@ -1,11 +1,11 @@
-package linked_list
+package list
 
 type Node struct {
-	Value int
+	Value interface{}
 	Next  *Node
 }
 
-func NewNode(v int) *Node {
+func NewNode(v interface{}) *Node {
 	return &Node{Value: v}
 }
 
@@ -17,7 +17,7 @@ func NewLinkedList() *LinkedList {
 	return &LinkedList{}
 }
 
-func (l *LinkedList) Prepend(val int) *LinkedList {
+func (l *LinkedList) Prepend(val interface{}) *LinkedList {
 	newNode := NewNode(val)
 	newNode.Next = l.Head
 
@@ -26,7 +26,7 @@ func (l *LinkedList) Prepend(val int) *LinkedList {
 	return l
 }
 
-func (l *LinkedList) Append(val int) *LinkedList {
+func (l *LinkedList) Append(val interface{}) *LinkedList {
 	newNode := NewNode(val)
 
 	if l.Head == nil {
@@ -54,7 +54,7 @@ func (l *LinkedList) Append(val int) *LinkedList {
 	return l
 }
 
-func (l *LinkedList) RemoveByValue(val int) bool {
+func (l *LinkedList) RemoveByValue(val interface{}) bool {
 	if l.Head == nil {
 		return false
 	}
@@ -78,7 +78,7 @@ func (l *LinkedList) RemoveByValue(val int) bool {
 	return false
 }
 
-func (l *LinkedList) FindByValue(val int) *Node {
+func (l *LinkedList) FindByValue(val interface{}) *Node {
 	if l.Head == nil {
 		return nil
 	}
