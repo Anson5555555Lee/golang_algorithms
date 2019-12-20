@@ -33,3 +33,10 @@ func TestBruceForce(t *testing.T) {
 	fmt.Println()
 	fmt.Println(len(path))
 }
+
+func TestF(t *testing.T) {
+	ret := f(4)
+	if ret != 100 {
+		t.Fatal("wrong")
+	}
+}

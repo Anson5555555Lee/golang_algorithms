@@ -60,3 +60,11 @@ func bruteForceGetPath(matrix [][]int, currRow, currColumn int, path *[]*point) 
 
 	return false
 }
+
+func f(n int) int {
+	if n <= 1 {
+		return 1
+	}
+
+	return f(n-1) + f(n-1)
+}
