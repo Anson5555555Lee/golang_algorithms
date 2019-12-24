@@ -142,6 +142,24 @@ func TestLinkedListFindByValue(t *testing.T) {
 	}
 }
 
+func TestLinkedListFromArray(t *testing.T) {
+	input := []int{1, 2, 3, 4, 5, 6, 7}
+	linkedList := NewLinkedList()
+	linkedList.FromArray(input)
+
+	if linkedList.Head.Value != 1 {
+		t.Fatalf("Expected %d but got %d", 1, linkedList.Head.Value)
+	}
+
+	if linkedList.Head.Next.Value != 2 {
+		t.Fatalf("Expected %d but got %d", 1, linkedList.Head.Next.Value)
+	}
+
+	if linkedList.Head.Next.Next.Value != 3 {
+		t.Fatalf("Expected %d but got %d", 1, linkedList.Head.Next.Next.Value)
+	}
+}
+
 func TestLinkedListReverse(t *testing.T) {
 	linkedList := NewLinkedList()
 	linkedList.Append(1)

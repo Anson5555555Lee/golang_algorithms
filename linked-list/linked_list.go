@@ -14,7 +14,7 @@ type LinkedList struct {
 }
 
 func NewLinkedList() *LinkedList {
-	return &LinkedList{}
+	return &LinkedList{nil}
 }
 
 func (l *LinkedList) Prepend(val interface{}) *LinkedList {
@@ -93,6 +93,24 @@ func (l *LinkedList) FindByValue(val interface{}) *Node {
 	}
 
 	return nil
+}
+
+func (l *LinkedList) FromArray(input []int) {
+	for _, v := range input {
+		l.Append(v)
+	}
+}
+
+func (l *LinkedList) Slice() []int {
+	node := l.Head
+	ret := []int{}
+
+	for node.Next != nil {
+		ret = append(ret, (node.Value).(int))
+		node = node.Next
+	}
+
+	return ret
 }
 
 func (l *LinkedList) Reverse() {
