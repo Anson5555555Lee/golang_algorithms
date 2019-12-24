@@ -105,7 +105,7 @@ func (l *LinkedList) Slice() []int {
 	node := l.Head
 	ret := []int{}
 
-	for node.Next != nil {
+	for node != nil {
 		ret = append(ret, (node.Value).(int))
 		node = node.Next
 	}
