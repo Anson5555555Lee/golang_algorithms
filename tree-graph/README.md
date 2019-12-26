@@ -18,3 +18,15 @@ the last level is filled, it is filled left to right.
 A full binary tree is a binary tree in which every node has either zero or two children. That is, no nodes have only one child. 
 
 **Perfect Binary Trees**
+A perfect binary tree is one that is both full and complete.
+
+### Binary Tree Traversal 
+
+````text
+In-order: left branch -> current node -> right branch
+We perform on a binary search tree, it visits the nodes in ascending order (hence the name "in-order")
+Pre-order: current node -> left branch -> right branch 
+Visiting the current node before its child nodes, hence the name "pre-order"
+Post-order: left branch -> right branch -> current node
+Visiting the current node after its child nodes, hence the name "post-order"
+````
