@@ -220,7 +220,6 @@ func (this *BinaryTreeNode) PostorderIterativeSingleStack() []int {
 			}
 		} else if current.Right == prev { // coming up from the right side
 			result = append(result, (nodes.Pop()).(*BinaryTreeNode).Value)
-
 		}
 
 		prev = current
