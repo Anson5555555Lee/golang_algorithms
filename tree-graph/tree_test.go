@@ -1,8 +1,9 @@
 package tg
 
-import "testing"
-
-import "reflect"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestBinaryTreeNode(t *testing.T) {
 	node := BinaryTreeNode{}

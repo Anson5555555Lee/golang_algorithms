@@ -1,5 +1,7 @@
 package tg
 
+import "github.com/golang-collections/collections/stack"
+
 type BinaryTreeNode struct {
 	Value int
 	Left  *BinaryTreeNode
@@ -49,6 +51,14 @@ func (this *BinaryTreeNode) InOrder() []int {
 	if this.Right != nil {
 		result = append(result, this.Right.InOrder()...)
 	}
+
+	return result
+}
+
+func (this *BinaryTreeNode) InOrderIterative() []int {
+	result := []int{}
+
+	nodes := stack.New()
 
 	return result
 }
