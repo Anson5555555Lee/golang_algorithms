@@ -1,6 +1,12 @@
 package merge
 
+// mergesort performs O(N) operations on each level (width)
+// each level splits the data in 2, so there are log2N levels (height)
+// product of these = N*log2N = O(Nlog2N)
+// for example: N = 32. Performs ~log2(32) = 5 levels of N operations each
+
 func sort(arr []int) []int {
+	// base case
 	// If array is empty or consists of one element then return this array since it is sorted.
 	if len(arr) <= 1 {
 		return arr
