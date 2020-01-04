@@ -31,13 +31,14 @@ func sublists(space []string) [][]string {
 		chosen = append(chosen, s)
 		recursion(space, chosen)
 		// - un-choose
-		space = append([]string{s}, space...)
-		chosen = chosen[:len(chosen)-1]
+		// space = append([]string{s}, space...)
+		// chosen = chosen[:len(chosen)-1]
 	}
 
-	recursion(space, []string{})
-	for _, v := range result {
-		fmt.Println(v)
-	}
+	// recursion(space, []string{})
+	recursion(space, make([]string, 0, 100))
+	// for _, v := range result {
+	// 	fmt.Println(v)
+	// }
 	return result
 }

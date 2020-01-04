@@ -1,6 +1,6 @@
 # [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-## 题目
+## Description
 Say you have an array for which the ith element is the price of a given stock on day i.
 
 If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
@@ -18,6 +18,3 @@ Output: 0
 In this case, no transaction is done, i.e. max profit = 0.
 ```
 
-## 解题思路
-
-见程序注释
