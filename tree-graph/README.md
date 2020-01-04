@@ -30,3 +30,13 @@ Visiting the current node before its child nodes, hence the name "pre-order"
 Post-order: left branch -> right branch -> current node
 Visiting the current node after its child nodes, hence the name "post-order"
 ````
+
+### Traversal Trick
+````text
+To quickly generate a traversal:
+- Trace a path counterclockwise
+- As you pass a node on the proper side, process it.
+  - pre-order: left side
+  - in-order: bottom
+  - post-order: right side
+````

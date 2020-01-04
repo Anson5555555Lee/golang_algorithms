@@ -8,11 +8,11 @@ import "fmt"
 
 func sublists(space []string) [][]string {
 	result := [][]string{}
-	chosen := []string{}
 
-	var recursion func()
+	var recursion func([]string, []string)
 
-	recursion = func() {
+	recursion = func(space, chosen []string) {
+		fmt.Println("space ", space, "chosen ", chosen)
 		// base case
 		if len(space) == 0 {
 			temp := make([]string, len(chosen))
@@ -27,16 +27,15 @@ func sublists(space []string) [][]string {
 		// - choose (try without s, ... try with s)
 
 		// - explore
-		recursion()
+		recursion(space, chosen)
 		chosen = append(chosen, s)
-		recursion()
-
+		recursion(space, chosen)
 		// - un-choose
 		space = append([]string{s}, space...)
 		chosen = chosen[:len(chosen)-1]
 	}
 
-	recursion()
+	recursion(space, []string{})
 	for _, v := range result {
 		fmt.Println(v)
 	}
